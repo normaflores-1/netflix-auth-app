@@ -44,7 +44,11 @@ INSTALLED_APPS = [
     'users',
     'movies',
 ]
-
+REST_FRAMEWORK ={
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'res_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
